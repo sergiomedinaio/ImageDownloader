@@ -17,7 +17,12 @@ public class MainActivity extends AppCompatActivity {
 
     public void download(View v) {
         ImageView imageView = findViewById(R.id.imageView);
+        ImageView imageView2 = findViewById(R.id.imageView2);
+
         ImageDownloader descarga = new ImageDownloader(imageView);
         descarga.execute("https://www.muycomputer.com/wp-content/uploads/2019/12/android.jpg");
+
+        ImageDownloader descarga2 = new ImageDownloader(imageView2);
+        descarga2.execute("https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/media/image/2022/10/android-2832529.jpg");
     }
 }
