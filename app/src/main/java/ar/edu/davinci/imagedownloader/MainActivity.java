@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -15,7 +16,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void download(View v) {
-        ImageDownloader descarga = new ImageDownloader();
+        ImageView imageView = findViewById(R.id.imageView);
+        ImageDownloader descarga = new ImageDownloader(imageView);
         descarga.execute("https://www.muycomputer.com/wp-content/uploads/2019/12/android.jpg");
     }
 }
