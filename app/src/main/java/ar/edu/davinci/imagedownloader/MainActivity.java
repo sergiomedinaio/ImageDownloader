@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void download(View v) {
-        Log.i("testing", "probando click");
+        ImageDownloader descarga = new ImageDownloader();
+        descarga.execute("https://www.muycomputer.com/wp-content/uploads/2019/12/android.jpg");
     }
 }
